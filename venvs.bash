@@ -1,3 +1,4 @@
+# should be sources from .bashrc
 export AUTO_VENV_PATH=""
 export PROJECT_ROOT=""
 export USE_DOTENV=""
@@ -23,17 +24,7 @@ function check_venv() {
     fi
 }
 
-function enable_venvs() {
-    autoload -Uz add-zsh-hook
-    disable_venvs
-    add-zsh-hook chpwd check_venv
+function cd() {
+    builtin cd $1 && check_venv
 }
 
-
-function disable_venvs() {
-    add-zsh-hook -D chpwd check_venv
-}
-
-
-enable_venvs
-check_venv
