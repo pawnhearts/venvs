@@ -11,3 +11,6 @@ Configuration variables(add to .zshrc)
 export VENVS_DIR="~/.virtualenvs"
 export USE_DOTENV=""
 ```
+
+Don't use dotenv feature - use specialized zsh plugin. It was a quick hack and unsafe.
+

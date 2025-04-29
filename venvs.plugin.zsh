@@ -28,6 +28,7 @@ function enable_venvs() {
     autoload -Uz add-zsh-hook
     disable_venvs
     add-zsh-hook chpwd check_venv
+    check_venv
 }
 
 
@@ -37,4 +38,3 @@ function disable_venvs() {
 
 
 enable_venvs
-check_venv
